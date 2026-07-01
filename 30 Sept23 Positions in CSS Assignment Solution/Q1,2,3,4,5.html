@@ -1,0 +1,326 @@
+<!--Task 1:
+Problem Statement
+Write code to position 5 equal-sized (50 X 50px) boxes A, B, C, D, and E as followsC
+1. box A 200px from the left, and 200px from the top of the viewportH
+2. box B -30px left, and -30px above from the center of box AH
+3. box B -30px right, and -30px above from the center of box AH
+4.box B -30px left, and -30px below from the center of box AH
+5. box B -30px right, and -30px below from the center of box A.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box boxA">A
+        <div class="box boxB">B</div>
+        <div class="box boxC">C</div>
+        <div class="box boxD">D</div>
+        <div class="box boxE">E</div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .box {
+        width: 50px;
+        height: 50px;
+        background-color: aquamarine;
+        text-align: center;
+    }
+
+    .boxA {
+        position: relative;
+        left: 200px;
+        top: 200px;
+    }
+
+    .boxB {
+        position: absolute;
+        left: -30px;
+        bottom: 30px;
+    }
+
+    .boxC {
+        position: absolute;
+        right: -30px;
+        bottom: 30px;
+    }
+
+    .boxD {
+        position: absolute;
+        left: -30px;
+        top: 30px;
+    }
+
+    .boxE {
+        position: absolute;
+        right: -30px;
+        top: 30px;
+    }
+</style>
+
+
+3.Problem Statement
+Create a card as shown in the picture below. (You can use CSS float property only for layout).
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="card">
+        <img class="card-image"
+            src="https://i0.wp.com/picjumbo.com/wp-content/uploads/evening-nature-scenery-with-sunset-lake-and-cabin-free-image.jpg?w=600&quality=80"
+            alt="Random Image" />
+
+        <div class="card-body">
+            <h2 class="card-title">The Earth!!!</h2>
+            <p>Nature is Earth's masterpice, a symphony of life composed through millennia of evolution.It is a
+                testament to the incredible diversity and beauty of our planet.
+                It's landscapes whisper stories of ancient geological processes, while its ecosystems teem with a myriad
+                of species, each playing a unique role in the delicate
+                balance of life. From the towering mountains to the vast oceans, from the dense forests to the arid
+                deserts, nature's artistry is evident in every corner of the globe.
+                It is a source of inspiration, a sanctuary for reflection, and a reminder of our responsibility to
+                protect and preserve this precious gift for future generations.
+                From delicate petals to majestic wildlife, nature's wonders never cease to amaze and humble us, urging
+                us to tread lightly and cherish the world we call home.
+                Nature is Earth's masterpiece, a symphony of life composed through millennia of evolution. It is a
+                testament to the incredible diversity and beauty of our planet.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .card {
+        padding: 10px;
+        background-color: beige;
+        border-radius: 10px;
+        border: 5px solid black;
+    }
+
+    .card-image {
+        float: right;
+        padding-left: 10px;
+        padding-right: 10px;
+        size: small;
+    }
+</style>
+
+
+4.Problem Statement
+Create a simple header that sticks to the top of a webpage upon scrolling.
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="logo">LOGO</div>
+            <div class="nav">
+                <ul>
+                    <li class="nav-item active">Home</li>
+                    <li class="nav-item">Pricing</li>
+                    <li class="nav-item">Contact</li>
+                    <li class="nav-item">Terms and Conditions</li>
+                    <li class="nav-item buttom"><button>Get Started</button> </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <main>
+        <section>
+            <h1>Heading 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                tempor incididunt ut labore et
+                dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                tempor incididunt ut labore et
+                dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+
+        <section>
+            <h2>Heading 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                tempor incididunt ut labore et
+                dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                tempor incididunt ut labore et
+                dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+
+        <section>
+            <h2>Heading 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                tempor incididunt ut labore et
+                dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                tempor incididunt ut labore et
+                dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+    </main>
+</body>
+
+</html>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .header {
+        position: sticky;
+        top: 0px;
+        height: 80px;
+        background-color: #2b2922;
+        color: #f0efee;
+    }
+
+    .logo {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 20px;
+        margin: auto 0px;
+        height: fit-content;
+        font-weight: bold;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .nav {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        margin: auto 0px;
+        height: fit-content;
+        font-family: "Red Rose", cursive;
+    }
+
+    .nav-item {
+        display: inline;
+        margin: 0px 15px;
+        color: #63615a;
+    }
+
+    .nav-item.active {
+        color: #ffffff;
+    }
+
+    .nav-item.buttom>button {
+        background: transparent;
+        color: #a08f36;
+        border: 5px solid #a08f36;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-family: "Red Rose", cursive;
+    }
+
+    main {
+        padding: 20px;
+        border: #2b2922 5px solid;
+
+    }
+
+    section {
+        margin-top: 20px;
+    }
+</style>-->
+
+5.Problem Statement
+Explain the z-index, with a code example.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box_1">z-index 1</div>
+        <div class="box box_2">z-index 2</div>
+        <div class="box box_3">z-index 3</div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .container {
+        position: relative;
+    }
+
+    .box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        color: white;
+        text-align: center;
+        font-size: 5px;
+    }
+
+    .box_1 {
+        background-color: red;
+    }
+
+    .box_2 {
+        background-color: blue;
+        top: 50px;
+        left: 50px;
+        z-index: 1
+    }
+
+    .box_3 {
+        background-color: green;
+        top: 100px;
+        left: 100px;
+        z-index: 3;
+    }
+</style>
