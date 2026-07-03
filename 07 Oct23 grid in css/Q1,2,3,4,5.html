@@ -1,0 +1,317 @@
+<!--Task 1:
+Problem Statement
+Create an image gallery using a CSS grid.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="photo-gallery">
+        <div class="photo-1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6MYdCo7p0ptB3P2e9Ycxym1W2H-dj_ImIlnvocXseGw&s=10"
+                alt="image-1" />
+        </div>
+        <div class="photo-2">
+            <img src="https://cdn.pixabay.com/photo/2016/11/21/06/53/beautiful-natural-image-1844362_1280.jpg"
+                alt="image-2" />
+        </div>
+        <div class="photo-3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHhy8dk0hu4cG0QXzgCkPyn8sg2fzSdV79AgPTVPORag&s=10"
+                alt="image-3" />
+        </div>
+        <div class="photo-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC8z7DoIRqklUYo4pEDmlTxKIyZ9myc2Z8MC73goKWOw&s=10"
+                alt="image-4" />
+        </div>
+        <div class="photo-5">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/049/855/347/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg"
+                alt="image-5" />
+        </div>
+        <div class="photo-6">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvI55tpGnChX65YhFsd0pyBFPxcdo7x0MNRrAAVpuNoQ&s=10"
+                alt="image-6" />
+        </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .photo-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 250px);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .photo-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+    }
+
+    .photo-2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .photo-3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .photo-4 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+
+
+    .photo-5 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .photo-6 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+</style>
+
+
+2.Problem Statement
+Write code to arrange containers with texts A, B, C, and D as shown in the below image.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box boxa">A</div>
+        <div class="box boxb">B</div>
+        <div class="box boxc">C</div>
+        <div class="box boxd">D</div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .container {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 100px 100px 100px;
+    }
+
+    .box {
+        background-color: bisque;
+        color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 150%;
+        color: black;
+    }
+
+    .boxa {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .boxb {
+        grid-column: 3;
+        grid-row: 1 / 3;
+    }
+
+    .boxc {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .boxd {
+        grid-column: 2;
+        grid-row: 2;
+    }
+</style>
+
+
+3.Problem Statement
+Explain the use of grid-auto-row and grid-auto-column using code examples.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .container {
+        display: grid;
+        grid-template-areas: "X X";
+        grid-template-rows: 50px;
+        grid-auto-rows: 200px;
+    }
+
+    .container>div {
+        background-color: lightblue;
+        border: 1px solid #000;
+        padding: 5px;
+    }
+</style>
+
+4.Problem Statement
+Write CSS to show numbers as shown in the figure, without altering the below html code.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    body {
+        margin: 40px;
+    }
+
+    .box {
+        background-color: lightcoral;
+        color: white;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 150%;
+        order: 1;
+    }
+
+    .box:nth-child(even) {
+        background-color: #ccc;
+        color: #000;
+    }
+
+    .container {
+        width: 600px;
+        display: grid;
+        grid-template-columns: repeat(6, 100px);
+        grid-gap: 10px;
+    }
+
+    .box1 {
+        order: 3;
+    }
+
+    .box2 {
+        order: 6;
+    }
+
+    .box3 {
+        order: 2;
+    }
+</style>
+-->
+
+5.Problem Statement
+Explain the difference between justify-items and justify-self using code examples.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box1">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+        <div class="box4">Box 4</div>
+        <div class="box5">Box 5</div>
+        <div class="box6">Box 6</div>
+    </div>
+
+</body>
+
+</html>
+
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        border: 1px solid black;
+    }
+
+    .container>div {
+        border: 1px solid black;
+        padding: 5px;
+        background-color: bisque;
+    }
+</style>
