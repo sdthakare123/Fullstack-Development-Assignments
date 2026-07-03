@@ -1,0 +1,264 @@
+<!--Q1. Describe the main differences between the CSS Flexbox layout model and the CSS Grid layout model. When 
+would you choose to use one over the other?
+Answer:
+Flexbox
+Flexbox when you prioritize content flow and alignment 
+over strict placement grids.Linear UI components: Use it for 
+navigation bars, menus, and simple toolbars.Content-sized elements:
+Perfect when the size of the container needs to adapt dynamically to
+text lengths (e.g., tags or badges).Centering or spacing: Excellent 
+for quickly shifting and aligning a small group of items along a single line.
+
+CSS Grid:
+CSS Grid when you need absolute control over the structural 
+alignment of an overall layout.Macro web page structures: Use it to create 
+full-page wireframes including sections like header, sidebar, main content, 
+and footer.Rigid multi-axis designs: Ideal for dashboards, complex product 
+grids, or photo galleries where elements must line up vertically and horizontally.
+Asymmetrical layout designs: Use it when elements must explicitly overlap or 
+span multiple rows/columns.
+
+The industry-standard strategy is utilizing CSS Grid for the macro layout 
+(overall skeleton) and nesting Flexbox for the micro layout (aligning 
+elements inside individual grid cells).
+
+Q2. Explain the role of the following key properties in the Flexbox layout mode
+1. justify-content
+2. align-items
+3. gap
+4. flex-direction
+5. flex-wrap
+Answer:
+1. justify-content (Main Axis Alignment):
+Defines how flex items align along the main-axis (horizontal if direction is row, vertical if column).
+flex-start (default): Items pack tightly at the beginning of the line.flex-end: Items pack tightly at the end of the line.
+center: Items bunch together in the middle of the line.
+space-between: First item hits the start, last item hits the end, empty space distributes evenly between them.
+
+2. align-items (Cross Axis Alignment):
+Defines how flex items align along the cross-axis (perpendicular to the main-axis).
+stretch (default): Items stretch to fill the full size of the container along this axis.
+flex-start: Items line up at the start edge of the cross-axis.
+flex-end: Items line up at the end edge of the cross-axis.
+center: Items center themselves perfectly along the cross-axis.
+baseline: Items align based on the text baselines inside them.
+
+3. gap:
+Defines the spacing between flex items along both the main and cross axes.
+row-gap: Sets the vertical spacing between rows of flex items.
+column-gap: Sets the horizontal spacing between columns of flex items.
+
+4. flex-direction (The Direction):
+Sets the primary axis (main-axis) along which the flex items are laid out.
+row (default): Items flow horizontally from left to right.
+column: Items flow vertically from top to bottom.
+row-reverse / column-reverse: Flips the start and end positions of the flow.
+
+5. flex-wrap:
+Controls whether flex items are forced into a single line or can spill over into multiple lines.
+nowrap (default): All items squeeze onto one single line, even if they shrink or overflow the container.
+wrap: Items automatically break onto new lines if they run out of room.
+wrap-reverse: Items break onto new lines, but the rows stack from bottom to top.
+
+3. Write the code to center a div using CSS Flexbox.
+Reference Image given below:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="green"></div>
+</body>
+
+</html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .green {
+        width: 300px;
+        height: 300px;
+        background-color: lightgreen;
+    }
+</style>
+
+
+Q4. A client of yours wants to add a pricing section on their website to showcase their newly introduced
+premium plans.
+You have to build the pricing section for their business. They have provided you with the figma design for the
+same.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="pricing-section">
+        <div class="card">
+            <h2 class="plane-name">Free Plan</h2>
+            <p class="plan-for">For personal</p>
+            <h2 class="plan-price">$0</h2>
+            <p class="feature"><span><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqBEyzG8eU8e07a_cuzaKm8VDUGkVD4EwWg6-oYMtPQ&s=10"
+                        alt=""></span>1
+                Uses</p>
+            <p class="feature"><span><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqBEyzG8eU8e07a_cuzaKm8VDUGkVD4EwWg6-oYMtPQ&s=10"
+                        alt=""></span>4
+                Web mails</p>
+            <p class="feature"><span><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqBEyzG8eU8e07a_cuzaKm8VDUGkVD4EwWg6-oYMtPQ&s=10"
+                        alt=""></span>Responsive Website</p>
+            <p class="feature"><span><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqBEyzG8eU8e07a_cuzaKm8VDUGkVD4EwWg6-oYMtPQ&s=10"
+                        alt=""></span>Free SSL</p>
+            <div class="subscribe-now-botton-container">
+                <button class="subscribe-now-botton-container">Subscribe Now</button>
+            </div>
+        </div>
+
+        <div class="card dark">
+            <h2 class="plane-name">Basic Plan</h2>
+            <p class="plan-for">For small businesses</p>
+            <h2 class="plan-price">$29</h2>
+            <p class="feature"><span><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqBEyzG8eU8e07a_cuzaKm8VDUGkVD4EwWg6-oYMtPQ&s=10"
+                        alt="tick"></span>5 Uses</p>
+            <p class="feature"><span><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqBEyzG8eU8e07a_cuzaKm8VDUGkVD4EwWg6-oYMtPQ&s=10"
+                        alt="tick"></span>10 Web mails</p>
+            <p class="feature"><span><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqBEyzG8eU8e07a_cuzaKm8VDUGkVD4EwWg6-oYMtPQ&s=10"
+                        alt="tick"></span>Responsive Website</p>
+            <p class="feature"><span><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqBEyzG8eU8e07a_cuzaKm8VDUGkVD4EwWg6-oYMtPQ&s=10"
+                        alt="tick"></span>Free SSL</p>
+            <div class="subscribe-now-botton-container">
+                <button class="subscribe-now-botton-container">Subscribe Now</button>
+            </div>
+        </div>
+
+        <div class="card dark">
+            <h2 class="plane-name">Pro Plan</h2>
+            <p class="plan-for">For enterprises</p>
+            <h2 class="plan-price">$49</h2>
+            <p class="feature"><span><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqBEyzG8eU8e07a_cuzaKm8VDUGkVD4EwWg6-oYMtPQ&s=10"
+                        alt="tick"></span>Unlimited Uses</p>
+            <p class="feature"><span><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqBEyzG8eU8e07a_cuzaKm8VDUGkVD4EwWg6-oYMtPQ&s=10"
+                        alt="tick"></span>Unlimited Webmails</p>
+            <p class="feature"><span><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqBEyzG8eU8e07a_cuzaKm8VDUGkVD4EwWg6-oYMtPQ&s=10"
+                        alt="tick"></span>Responsive Website</p>
+            <p class="feature"><span><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqBEyzG8eU8e07a_cuzaKm8VDUGkVD4EwWg6-oYMtPQ&s=10"
+                        alt="tick"></span>Free SSL + SEO</p>
+            <div class="subscribe-now-botton-container">
+                <button class="subscribe-now-botton-container">Subscribe Now</button>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
+<style>
+    body p,
+    h1,
+    h2,
+    h3 {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+    .img {
+        width: 1000%;
+        height: 1000%;
+    }
+
+
+    .pricing-section {
+        min-height: 100vh;
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        background-color: #f4f2fd;
+        box-sizing: border-box;
+    }
+
+    .card {
+        background-color: white;
+        border-radius: 7px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding-top: 50px;
+        padding-left: 35px;
+        width: 250px;
+
+    }
+
+    .plane-name {
+        font-size: 36px;
+    }
+
+    .pricing {
+        font-size: 36px;
+        font-weight: 100;
+        margin: 12px 0;
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+    }
+
+    .subscribe-now-botton-container {
+        display: flex;
+        justify-content: center;
+        margin-top: -35px;
+    }
+
+    .subscribe-now-botton-container {
+        background-color: #202842;
+        color: white;
+        padding: 10px 35px;
+        border-radius: 24px;
+        font-size: 18px;
+        margin: 30px auto;
+        border-color: transparent;
+    }
+
+    .dark {
+        background-color: #202842;
+        color: white;
+    }
+
+    .dark-btn {
+        background-color: white;
+        color: black;
+    }
+</style>
