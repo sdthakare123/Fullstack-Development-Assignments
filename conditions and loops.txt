@@ -1,0 +1,112 @@
+*Q1. What are conditional statements Explain conditional statements with syntax and examples.
+Conditional statements are used to perform different actions based on different conditions. They allow a program to make decisions and execute specific blocks of code only when certain criteria are met.
+
+The following are common conditional statements with their syntax and examples:
+
+ 1. "if" Statement
+
+The "if" statement executes a block of code if a specified condition is true.
+
+  Syntax:
+    " javascript
+    if (condition) {
+      // code to be executed if the condition is true
+    }
+    "
+    Example
+    " javascript
+    const marks = 95;
+    if (marks > 90) {
+      console.log("A Grade");
+    }"
+
+2. if...else Statement
+
+The if...else statement executes one block of code if a condition is true and another block if it is false.
+
+  Syntax
+    "javascript
+    if (condition) {
+      // code to be executed if the condition is true
+    } else {
+      // code to be executed if the condition is false
+    }
+    "
+  Example:
+     javascript
+    const marks = 45;
+    if (marks >= 50) {
+      console.log("Pass");
+    } else {
+      console.log("F Grade");
+    }
+
+ 3. if...else if...else Statement
+
+This statement is used to test multiple conditions in sequence.
+
+  Syntax:
+     javascript
+    if (condition1) {
+      // code if condition1 is true
+    } else if (condition2) {
+      // code if condition2 is true
+    } else {
+      // code if both conditions are false
+    }
+    
+    
+  Example
+     javascript
+    const marks = 75;
+    if (marks > 90) {
+      console.log("A Grade");
+    } else if (marks >= 70 && marks <= 90) {
+      console.log("B Grade");
+    } else if (marks >= 50 && marks < 70) {
+      console.log("C Grade");
+    } else {
+      console.log("F Grade");
+    }
+
+
+ 4.switch Statement
+
+The switch statement is used to perform different actions based on different conditions by evaluating an expression against multiple cases.
+Syntax
+    javascript
+    switch(expression) {
+      case x:
+        // code block
+        break;
+      case y:
+        // code block
+        break;
+      default:
+        // code block
+    }
+    
+    
+Q3. What are loops, and what do we need them? Explain different types of loops with their syntax and
+examples.
+
+Loops are control structures used to execute a block of code repeatedly as long as a specified condition is met.
+We need them to automate repetitive tasks, efficiently process large datasets, and prevent code duplication, making programs more concise and maintainable.
+
+1. For LoopUsed when the exact number of iterations is known beforehand. It combines initialization, condition, and update expressions into a single line.
+2. While LoopUsed when the number of iterations is not known, and the loop continues to execute as long as a specific condition evaluates to true.
+3. Do-While LoopSimilar to a while loop, but it guarantees that the code block is executed at least once before the condition is tested.
+4. For-Each LoopSpecifically designed to easily iterate through items in a collection or array without needing to manage index counters
+To deepen your understanding of how loops can control program flow, consider learning about loop control statements such as break and continue, or exploring nested loops.
+
+
+Q5. Use the while loop to print numbers from 1 to 25 in ascending and descending order.
+
+
+Here are simple Python code snippets to print numbers from 1 to 25 in both ascending and descending order using a  loop. [1, 2, 3]  
+Ascending Order 
+This loop starts at 1, prints the number, and increments by 1 until it reaches 25. [4, 5, 6]  
+Descending Order 
+This loop starts at 25, prints the number, and subtracts 1 until it reaches 1. [7, 8]  
+
+
