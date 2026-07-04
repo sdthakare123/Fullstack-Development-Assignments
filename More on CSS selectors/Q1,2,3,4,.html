@@ -1,0 +1,206 @@
+<!--Q1. For the given index.html file. Perform the following task, without changing the index.html file.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h2>TOI</h2>
+            <div>
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="#" target="_blank">Home</a></li>
+                    <li><a href="#" class="active" target="_self">About</a></li>
+                    <li><a href="#" target="_blank">Services</a></li>
+                    <li><a href="#" target="_blank">Contact</a></li>
+                </ul>
+            </div>
+            <p> The Times of India</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam officiis quibusdam sapiente?
+                Vero eaque esse amet officia consectetur laboriosam velit accusantium numquam illo
+                nostrum aperiam at ex asperiores, facilis quia?</p>
+            <p>read articles</p>
+        </nav>
+    </header>
+</body>
+
+</html>
+
+<style>
+    nav a {
+        color: green;
+    }
+
+    nav>h2 {
+        color: red;
+        background-color: snow;
+    }
+
+    ul+p {
+        color: red;
+    }
+
+    a[href] {
+        color: red;
+        text-decoration: none;
+    }
+
+    a[class="active"] {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    a[target="_self"] {
+        background-color: grey;
+    }
+
+    p:last-child::after {
+        content: "...";
+    }
+
+    li::marker {
+        color: green;
+    }
+
+    p:nth-child(even)::first-letter {
+        color: red;
+        font-size: 30px;
+    }
+</style>
+
+Q2. For the given index.html file. Perform the following task, without changing the index.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    </main>
+</body>
+
+</html>
+
+<style>
+    ul li a {
+        list-style: none;
+        text-decoration: none;
+    }
+
+    ul>li {
+        display: inline;
+    }
+
+    li+li {
+        margin: 10px;
+    }
+</style>
+
+Q3. Using any of the Pseudo element selectors, add any random words after and before the given HTML tag
+index.html.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>element</h1>
+</body>
+
+</html>
+<style>
+    h1::after {
+        content: "selector";
+    }
+
+    h1::before {
+        content: "Pseudo";
+    }
+</style>
+
+Q4.Illustrate one example of a pseudo-class element selector hover example should include the following-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Buttons</title>
+    <style>
+        .button-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            background-color: royalblue;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            color: #ffffff;
+            border-radius: 10px;
+        }
+
+        .secondary-btn:hover {
+            box-shadow: 10px 5px 5px grey;
+            cursor: pointer;
+        }
+
+        .primary-btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .secondary-btn {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="button-container">
+        <button class="btn primary-btn">PW Skills</button>
+        <button class="btn secondary-btn">PW Skills</button>
+    </div>
+
+</body>
+
+</html>
